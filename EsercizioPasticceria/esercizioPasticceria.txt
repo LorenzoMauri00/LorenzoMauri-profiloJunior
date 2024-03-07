@@ -1,0 +1,17 @@
+ESERCIZIO PASTICCERIA LORENZO MAURI
+
+LINK UML:
+https://www.canva.com/design/DAF-1nIrLcI/g-sQ4QlrZ5trY-qx0khzzw/edit?utm_content=DAF-1nIrLcI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Come primo step ho creato e popolato le liste degli ingredienti con i valori predefiniti.
+Successivamente uso uno scanner per ottenere dall'utente un valore tra 1 e 2, in base al quale sceglie la modalità manuale o randomica.
+Se viene selezionata la modalità manuale, all'utente verrà chiesto di inserire per 4 volte un codice ingrediente, in base al quale selezionerà
+una base, un ripieno, un frutto e una decorazione.
+Tramite l'uso degli switch sleziono l'ingrediente corrspondente ad ogni selezione dell'utente e lo aggiungo ad un'altra lista
+che andrà a rappresentare il prodotto finito in base alle richieste dell'utente.
+
+
+Riconosco di aver sprecato troppo tempo nel cercare di rendere più "elegante" e dinamico il codice tramite l'utilizzo di un ciclo che alla fine non sono riuscito a implementare.
+Per questo non ho completato la modalità randomica in tempo.
+
+Sono soddisfatto della prima parte dell' esercizio perchè funziona correttamente, ma posso e devo comunque fare meglio.
