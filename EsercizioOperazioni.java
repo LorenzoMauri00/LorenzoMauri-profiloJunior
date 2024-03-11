@@ -7,7 +7,7 @@ public class EsercizioOperazioni {
 
         //creo oggetto scanner per le scelte dell'utente e contatore per il numero operazioni svolte
         Scanner scannerScelta = new Scanner(System.in);
-        int j = 0;
+        int contaOperazioni = 0;
 
         //il ciclo simula un while, continua in loop finchè l'utente non sceglie di interromperlo
         for(int i = 0; i < 1;){
@@ -16,7 +16,6 @@ public class EsercizioOperazioni {
             System.out.println("Vuoi eseguire un operazione?");
             String opSiNo = (scannerScelta.nextLine());
 
-            
             if(opSiNo.toUpperCase().equals("SI")){
 
                 //se l'utente vuole procedere deve scegliere quale operazione svolgere
@@ -27,32 +26,31 @@ public class EsercizioOperazioni {
                 switch (opScelta.toUpperCase()){
                     case "SOMMA":
                         int somma = 7 + 2; //verrà implementata la scelta addendi dell'utente
-                        int sommaFake = 2; //verrà implementato il random
+                        int sommaFake = (int)(Math.random() * 101);
                         System.out.println("Il risultato della somma di 7 e 2 è " + somma + "; il risultato randomico è " + sommaFake);
-                        j++;
+                        contaOperazioni++;
                         break;
                     case "SOTTRAZIONE":
                         int sottr = 9 - 1; //verrà implementata la scelta addendi dell'utente
-                        int sottrFake = 15; //verrà implementato il random
+                        int sottrFake = (int)(Math.random() * 101);
                         System.out.println("Il risultato della sottrazione di 9 e 1 è " + sottr + "; il risultato randomico è " + sottrFake);
-                        j++;
+                        contaOperazioni++;
                         break;
                     case "MOLTIPLICAZIONE":
                         int moltip = 3 * 6; //verrà implementata la scelta addendi dell'utente
-                        int moltipFake = 5; //verrà implementato il random
+                        int moltipFake = (int)(Math.random() * 101);
                         System.out.println("Il risultato della moltiplicazione di 3 e 6 è " + moltip + "; il risultato randomico è " + moltipFake);
-                        j++;
+                        contaOperazioni++;
                         break;
                     case "DIVISIONE":
                         int div = 9 / 3; //verrà implementata la scelta addendi dell'utente
-                        int divFake = 31; //verrà implementato il random
+                        int divFake = (int)(Math.random() * 101);
                         System.out.println("Il risultato della divisione di 9 e 3 è " + div + "; il risultato randomico è " + divFake);
-                        j++;
+                        contaOperazioni++;
                         break;
                     default:
                         System.out.println("Operazione scelta non valida");
                 }
-
             } else {
 
                 //se l'utente non vuole svolgere operazioni incremento i ed esco dal ciclo
@@ -60,11 +58,7 @@ public class EsercizioOperazioni {
             }
 
             //stampo il numero di operazioni svolte
-            System.out.println("Hai svolto " + j + " operazioni.");
-
+            System.out.println("Hai svolto " + contaOperazioni + " operazioni.");
         }
-
-
     }
-
 }
