@@ -8,6 +8,7 @@ public class Menu {
 
         //
         Scanner scannerScelta = new Scanner(System.in);
+        Scanner scannerSceltaDue = new Scanner(System.in);
 
         int sceltaPiatto = 0;
         int prezzoPiatto = 0;
@@ -41,8 +42,8 @@ public class Menu {
             }
         } while (sceltaPiatto != 1 && sceltaPiatto != 2);
 
-        System.out.println("Selezionare ingrediente a scelta tra marmellata e nutella");
-        String ingredienteAScelta = scannerScelta.nextLine();
+        System.out.println("Selezionare ingrediente a scelta tra marmellata (1 euro) e nutella (2 euro)");
+        String ingredienteAScelta = scannerSceltaDue.nextLine();
         int prezzoIngredienteAScelta = 0;
 
         switch (ingredienteAScelta.toUpperCase()) {
@@ -66,6 +67,11 @@ public class Menu {
         //
         PiattoSpeciale piatto = new PiattoSpeciale(ingredienteBase);
         piatto.calcolaPrezzoTotale(prezzoPiatto);
+
+        piatto.addIngredienteAScelta(ingredienteAScelta, prezzoIngredienteAScelta);
+
+        System.out.println("Gli ingredienti selezionati sono " + piatto.getIngredienteFisso() + " e " + piatto.getIngredienteAScelta() + ".");
+        System.out.println("Per un totale di " + piatto.getPrezzoTotale() + " euro di cui 1 euro di servizio al tavolo");
 
     }
     
