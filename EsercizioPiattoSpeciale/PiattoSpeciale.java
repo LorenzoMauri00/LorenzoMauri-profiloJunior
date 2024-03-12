@@ -16,7 +16,7 @@ public class PiattoSpeciale {
     }
 
     //
-    public void addIngredienteAScelta(String ingredienteAScelta, double prezzo) {
+    public void addIngredienteAScelta(String ingredienteAScelta, int prezzo) {
         this.ingredienteAScelta = ingredienteAScelta;
         this.prezzoTotale += prezzo;
     }
@@ -27,7 +27,7 @@ public class PiattoSpeciale {
     }
 
     //
-    public double getPrezzoTotale() {
+    public int getPrezzoTotale() {
         return prezzoTotale;
     }
 

@@ -32,7 +32,7 @@ public class Menu {
                 case 2:
                     
                     prezzoPiatto = 2;
-                    ingredienteBase = "Focaccia";
+                    ingredienteBase = "focaccia";
                     break;
             
                 default:
