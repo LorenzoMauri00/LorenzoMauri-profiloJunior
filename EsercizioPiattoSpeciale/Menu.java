@@ -9,22 +9,29 @@ public class Menu {
         //
         Scanner scannerScelta = new Scanner(System.in);
 
+        int sceltaPiatto = 0;
+        int prezzoPiatto = 0;
+        String ingredienteBase = "";
+
+
         //
         do {
 
             System.out.println("Selezionare la base del piatto: 1 per il pane (1 euro), 2 per la focaccia (2 euro)");
-            int sceltaPiatto = scannerScelta.nextInt();
-
-            int prezzoPiatto;
+            sceltaPiatto = scannerScelta.nextInt();
 
             //
             switch (sceltaPiatto) {
                 case 1:
-                    
+
+                    prezzoPiatto = 1;
+                    ingredienteBase = "pane";
                     break;
 
                 case 2:
                     
+                    prezzoPiatto = 2;
+                    ingredienteBase = "Focaccia";
                     break;
             
                 default:
@@ -32,7 +39,33 @@ public class Menu {
                     System.out.println("Selezionare una base tra quelle disponibili");
                     break;
             }
-        } while (sceltaPiatto != 1 || sceltaPiatto != 2);
+        } while (sceltaPiatto != 1 && sceltaPiatto != 2);
+
+        System.out.println("Selezionare ingrediente a scelta tra marmellata e nutella");
+        String ingredienteAScelta = scannerScelta.nextLine();
+        int prezzoIngredienteAScelta = 0;
+
+        switch (ingredienteAScelta.toUpperCase()) {
+            case "MARMELLATA":
+
+                prezzoIngredienteAScelta = 1;
+                break;
+
+            case "NUTELLA":
+                
+                prezzoIngredienteAScelta = 2;
+                break;
+        
+            default:
+
+                System.out.println("L'ingrediente selezionato non è tra quelli previsti, quindi il suo costo sarà di 5 euro");
+                prezzoIngredienteAScelta = 5;
+                break;
+        }
+
+        //
+        PiattoSpeciale piatto = new PiattoSpeciale(ingredienteBase);
+        piatto.calcolaPrezzoTotale(prezzoPiatto);
 
     }
     

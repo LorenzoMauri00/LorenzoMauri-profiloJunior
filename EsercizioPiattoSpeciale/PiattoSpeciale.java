@@ -22,8 +22,8 @@ public class PiattoSpeciale {
     }
 
     //
-    public void calcolaPrezzoTotale(double prezzoIngredienteAScelta) {
-        this.prezzoTotale += prezzoIngredienteAScelta;
+    public void calcolaPrezzoTotale(double prezzoIngredienteFisso) {
+        this.prezzoTotale += prezzoIngredienteFisso;
     }
 
     //
