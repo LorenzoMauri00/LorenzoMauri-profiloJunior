@@ -6,7 +6,7 @@ import EsercizioDevices.DispositivoElettronico;
 
 class Smartphone extends DispositivoElettronico {
 
-    //
+    //tramite l'Override vado a modificare un metodo della classe padre
     @Override
 
     void avviaApplicazione(String nomeApp){
@@ -18,7 +18,7 @@ class Smartphone extends DispositivoElettronico {
         logging();
     }
 
-    //
+    //creo metodo logging che riceve i dati utente e li salva nelle variabili
     void logging() {
 
         // Creo un oggetto scanner per leggere l'input dall'utente
