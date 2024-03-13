@@ -2,6 +2,6 @@ package EsercizioDevices;
 
 import EsercizioDevices.DispositivoElettronico;
 
-public class Tablet extends DispositivoElettronico {
+class Tablet extends DispositivoElettronico {
     
 }

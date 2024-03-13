@@ -1,9 +1,9 @@
 package EsercizioDevices;
 
-public class ResocontoDigitale {
+class ResocontoDigitale {
 
     public static void main (String[]args){
-        
+
     }
     
 }
