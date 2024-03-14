@@ -1,10 +1,14 @@
 package EsercizioDevices;
 
-import EsercizioDevices.DispositivoElettronico;
-
 import java.util.ArrayList;
 
 class Tablet extends DispositivoElettronico {
+
+    int idUtente = 0;
+
+    //creo liste per punti e id degli utenti
+    ArrayList <Integer> listaPunti = new ArrayList <Integer>();
+    ArrayList <Integer> listaId = new ArrayList <Integer>();
 
     //tramite l'Override vado a modificare un metodo della classe padre
     @Override
@@ -18,8 +22,7 @@ class Tablet extends DispositivoElettronico {
         assegnaPunti();
 
         //richiamo il metodo che assegna un valore id all'utente e gli passo il valore 0
-        int idUtente = 0;
-        assegnaId(idUtente);
+        assegnaId();
     }
     
     //metodo per assegnare punti all'utente
@@ -27,12 +30,18 @@ class Tablet extends DispositivoElettronico {
 
         //assegno un valore randomico ai puntiUtente
         int puntiUtente = (int)(Math.random() * 101);
+
+        //aggiungo il valore dei punti utente alla lista
+        listaPunti.add(puntiUtente);
     }
 
     //metodo che riceve un valore e lo incrementa di uno
-    void assegnaId(int idUtente){
+    void assegnaId(){
 
         //poichè l'id deve partire da 1, assegno valore iniziale 0 e a ogni chiamata incremento di 1
         idUtente++;
+
+        //aggiungo il valore id dell'utente alla lista
+        listaId.add(idUtente);
     }
 }

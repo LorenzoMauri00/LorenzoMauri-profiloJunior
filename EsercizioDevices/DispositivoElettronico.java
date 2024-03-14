@@ -6,5 +6,4 @@ class DispositivoElettronico {
     void avviaApplicazione(String nomeApp){
         System.out.println("Avvio dell' applicazione " + nomeApp + " in corso");
     }
-    
 }

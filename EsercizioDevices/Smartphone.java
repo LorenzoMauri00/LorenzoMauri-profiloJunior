@@ -1,10 +1,16 @@
 package EsercizioDevices;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import EsercizioDevices.DispositivoElettronico;
-
 class Smartphone extends DispositivoElettronico {
+
+    String nomeUtente = "";
+    String password = "";
+
+    ArrayList <String> listaUtenti = new ArrayList <String>();
+    ArrayList <String> listaPassword = new ArrayList <String>();
+
 
     //tramite l'Override vado a modificare un metodo della classe padre
     @Override
@@ -24,11 +30,27 @@ class Smartphone extends DispositivoElettronico {
         // Creo un oggetto scanner per leggere l'input dall'utente
         Scanner scanner = new Scanner(System.in);
 
-        // Chiedi all'utente di inserire il nome utente e la password
-        System.out.println("Inserire il nome utente:");
-        String nomeUtente = scanner.nextLine();
-        System.out.println("Inserire la password:");
-        String password = scanner.nextLine();
+        do {
+
+            // Chiedo all'utente di inserire il nome utente
+            System.out.println("Inserire il nome utente: ");
+            nomeUtente = scanner.nextLine();
+
+            //se il nome utente è inferiore a 8 caratteri mando messaggio di errore
+            if (nomeUtente.length() < 4){System.out.println("Il nome utente deve avere almeno 4 caratteri ");}
+
+            // Chiedi all'utente di inserire la password
+            System.out.println("Inserire la password: ");
+            password = scanner.nextLine();
+
+            //se la password è inferiore a 8 caratteri mando messaggio di errore
+            if(password.length() < 8){System.out.println("La password deve avere almeno 8 caratteri");}
+
+        } while (nomeUtente.length() < 4 || password.length() < 8 );
+
+        //se i dati inseriti rispettano i parametri li aggiungo alla lista
+        listaUtenti.add(nomeUtente);
+        listaPassword.add(password);
 
     }
 }
